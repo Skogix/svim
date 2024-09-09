@@ -2,11 +2,23 @@
 skogix vim
 
 # todo
+- [ ] autocommands
+- [ ] helpers/util
+- [ ] keymaps
+- [ ] options
+- [ ] plugins
+  - [ ] oil
+  - [ ] telescope/fzf
+  - [ ] ai
+  - [ ] cmp
+  - [ ] harpoon
+  - [ ] lsp
+  - [ ] lualine
+  - [ ] treesitter
+  - [ ] trouble
+  - [ ] which-key
 - [ ] release 0.3
   - [ ] plugins
-- [ ] release 0.2
-  - [ ] readme
-  - [ ] installera lazy
 
 # done
 - [x] release 0.1
@@ -15,3 +27,6 @@ skogix vim
     - [x] master
     - [x] develop
     - [x] feature
+- [x] release 0.2
+  - [x] readme
+  - [x] installera lazy
