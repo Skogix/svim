@@ -2,4 +2,5 @@
 skogix vim
 
 # todo
-- [ ] git flow
+- [x] git flow
+  - [x] develop
