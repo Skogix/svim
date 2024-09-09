@@ -5,6 +5,7 @@ skogix vim
 
 # done
 - [x] git flow
+  - [ ] release
   - [x] master
   - [x] develop
   - [x] feature
