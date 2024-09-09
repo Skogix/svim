@@ -12,6 +12,7 @@ skogix vim
   - [ ] lualine
   - [ ] treesitter
   - [ ] trouble
+- [ ] relase 0.4
   - [/] lsp
   - [/] cmp
 
