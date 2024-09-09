@@ -2,7 +2,9 @@
 skogix vim
 
 # todo
-- [ ] git flow
-  - [ ] master
-  - [ ] develop
-  - [ ] feature
+
+# done
+- [x] git flow
+  - [x] master
+  - [x] develop
+  - [x] feature
