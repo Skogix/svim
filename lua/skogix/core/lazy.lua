@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     { import = "skogix.plugins.which-key" },
+    { import = "skogix.plugins.lazydev" },
     { import = "skogix.plugins.lsp" },
     { import = "skogix.plugins.cmp" },
   },
