@@ -30,3 +30,6 @@ skogix vim
 - [x] release 0.2
   - [x] readme
   - [x] installera lazy
+
+# hotfixes
+- läggs till mellan releases
