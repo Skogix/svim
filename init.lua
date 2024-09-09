@@ -3,3 +3,4 @@ vim.g.maplocalleader = ","
 
 require("skogix.core.lazy")
 require("skogix.core.keymaps")
+require("skogix.core.autocmds")
