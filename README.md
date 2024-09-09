@@ -28,6 +28,6 @@ skogix vim
 - [x] release 0.3
   - [x] plugins
     - [x] which-key
-- [x] autocommands
-- [x] keymaps
-- [x] options
+  - [x] autocommands
+  - [x] keymaps
+  - [x] options
