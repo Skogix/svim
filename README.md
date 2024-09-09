@@ -5,6 +5,7 @@ skogix vim
 - [ ] helpers/util
 - [ ] plugins
   - [ ] oil
+  - [/] lazydev
   - [ ] telescope/fzf
   - [ ] ai
   - [ ] cmp
