@@ -7,12 +7,12 @@ skogix vim
   - [ ] oil
   - [ ] telescope/fzf
   - [ ] ai
-  - [ ] cmp
   - [ ] harpoon
-  - [ ] lsp
   - [ ] lualine
   - [ ] treesitter
   - [ ] trouble
+  - [/] lsp
+  - [/] cmp
 
 # done
 - [x] release 0.1
