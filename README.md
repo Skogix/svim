@@ -2,10 +2,7 @@
 skogix vim
 
 # todo
-- [ ] autocommands
 - [ ] helpers/util
-- [ ] keymaps
-- [ ] options
 - [ ] plugins
   - [ ] oil
   - [ ] telescope/fzf
@@ -16,9 +13,6 @@ skogix vim
   - [ ] lualine
   - [ ] treesitter
   - [ ] trouble
-  - [ ] which-key
-- [ ] release 0.3
-  - [ ] plugins
 
 # done
 - [x] release 0.1
@@ -27,9 +21,13 @@ skogix vim
     - [x] master
     - [x] develop
     - [x] feature
+    - [x] hotfix
 - [x] release 0.2
   - [x] readme
   - [x] installera lazy
-
-# hotfixes
-- läggs till mellan releases
+- [x] release 0.3
+  - [x] plugins
+    - [x] which-key
+- [x] autocommands
+- [x] keymaps
+- [x] options
