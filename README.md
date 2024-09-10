@@ -11,6 +11,7 @@ skogix vim
     - [?] "huynle/ogpt.nvim"
     - [?] "David-Kunz/gen.nvim"
     - [?] "robitx/gp.nvim"
+    - [ ] avante 'yetone/avante.nvim'
     - [ ] aider
   - [ ] "folke/noice.nvim"
   - [-] neorg 'nvim-neorg/neorg'
