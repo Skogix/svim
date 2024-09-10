@@ -1,42 +1,41 @@
+-- This file contains the configuration for the avante.nvim plugin.
+-- It specifies the plugin's options, events, build instructions, and dependencies.
+
 return {
   "yetone/avante.nvim",
-  event = "VeryLazy",
-  lazy = false,
-  version = false, -- set this if you want to always pull the latest change
+  event = "VeryLazy",  -- Load the plugin on the "VeryLazy" event
+  lazy = false,        -- Do not lazy-load the plugin
+  version = false,     -- Always pull the latest changes; set a version if needed
   opts = {
     -- add any opts here
   },
-  -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-  build = "make",
+  build = "make",  -- Command to build the plugin from source
   dependencies = {
-    "stevearc/dressing.nvim",
-    "nvim-lua/plenary.nvim",
-    "MunifTanjim/nui.nvim",
-    --- The below dependencies are optional,
-    "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    "zbirenbaum/copilot.lua", -- for providers='copilot'
+    "stevearc/dressing.nvim",       -- Dependency for UI components
+    "nvim-lua/plenary.nvim",        -- Dependency for utility functions
+    "MunifTanjim/nui.nvim",         -- Dependency for UI elements
+    "nvim-tree/nvim-web-devicons",  -- Optional: for file icons (or use echasnovski/mini.icons)
+    "zbirenbaum/copilot.lua",       -- Optional: for Copilot integration
     {
-      -- support for image pasting
-      "HakonHarnes/img-clip.nvim",
-      event = "VeryLazy",
+      "HakonHarnes/img-clip.nvim",  -- Optional: support for image pasting
+      event = "VeryLazy",           -- Load on the "VeryLazy" event
       opts = {
-        -- recommended settings
+        -- Recommended settings for img-clip.nvim
         default = {
           embed_image_as_base64 = false,
           prompt_for_file_name = false,
           drag_and_drop = {
             insert_mode = true,
           },
-          -- required for Windows users
+          -- Required for Windows users to use absolute paths
           use_absolute_path = true,
         },
       },
     },
     {
-      -- Make sure to set this up properly if you have lazy=true
-      'MeanderingProgrammer/render-markdown.nvim',
+      'MeanderingProgrammer/render-markdown.nvim',  -- Optional: support for rendering markdown
       opts = {
-        file_types = { "markdown", "Avante" },
+        file_types = { "markdown", "Avante" },  -- File types to render
       },
       ft = { "markdown", "Avante" },
     },
