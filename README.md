@@ -12,7 +12,7 @@ skogix vim
     - [?] "David-Kunz/gen.nvim"
     - [?] "robitx/gp.nvim"
     - [ ] avante 'yetone/avante.nvim'
-    - [ ] aider
+    - [ai] aider
   - [ ] "folke/noice.nvim"
   - [-] neorg 'nvim-neorg/neorg'
   - [-] lualine

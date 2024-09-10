@@ -10,4 +10,13 @@ return {
     { "<leader>aider", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },  -- Keybinding to open Aider
     { "<leader>abg", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
   },
+  'joshuavial/aider.nvim',  -- The plugin repository
+  opts = {
+    auto_manage_context = true,  -- Automatically manage context for the plugin
+    default_bindings = true,     -- Use the default key bindings provided by the plugin
+  },
+  keys = {
+    { "<leader>aider", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },  -- Keybinding to open Aider
+    { "<leader>abg", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
+  },
 }
