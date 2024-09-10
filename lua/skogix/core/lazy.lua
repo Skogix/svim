@@ -21,5 +21,6 @@ require("lazy").setup({
     { import = "skogix.plugins.lsp" },
     { import = "skogix.plugins.cmp" },
     { import = "skogix.plugins.telescope" },
+    { import = "skogix.plugins.colorscheme" },
   },
 })
