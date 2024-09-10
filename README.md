@@ -11,7 +11,7 @@ skogix vim
     - [?] "huynle/ogpt.nvim"
     - [?] "David-Kunz/gen.nvim"
     - [?] "robitx/gp.nvim"
-    - [ ] avante 'yetone/avante.nvim'
+    - [ai] avante 'yetone/avante.nvim'
     - [ai] aider
   - [ ] "folke/noice.nvim"
   - [-] neorg 'nvim-neorg/neorg'
@@ -48,12 +48,12 @@ skogix vim
   - [x] options
 - [/] release 0.4
   - [/] lsp
-  - [/] cmp
+  - [ai] cmp
   - [/] lazydev
   - [/] telescope
   - [/] docs
     - [x] lazy
-  - [x] colorscheme 'catppuccin/nvim'
+  - [ai] colorscheme 'catppuccin/nvim'
 - [/] release 0.6
   - [x] harpoon "ThePrimeagen/harpoon"
   - [x] oil "stevearc/oil.nvim"
@@ -66,4 +66,4 @@ skogix vim
   - [/] ai
     - [x] "CopilotC-Nvim/CopilotChat.nvim"
     - [x] "zbirenbaum/copilot.lua"
-    - [x] "jackMort/ChatGPT.nvim"
+    - [ai] "jackMort/ChatGPT.nvim"
