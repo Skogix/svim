@@ -1,4 +1,4 @@
--- This file contains the configuration for the colorscheme plugin.
+-- This file contains the configuration for the Catppuccin colorscheme plugin.
 -- It specifies the plugin's options and dependencies.
 
 return {

@@ -1,3 +1,6 @@
+-- This file contains the configuration for the Oil.nvim plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
 local M = {
   "stevearc/oil.nvim",
   enabled = true,

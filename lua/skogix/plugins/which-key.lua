@@ -1,4 +1,7 @@
--- visar keybinds vid knapptryck
+-- This file contains the configuration for the Which-Key.nvim plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
+-- Show keybinds on keypress
 -- https://github.com/folke/which-key.nvim
 return {
   'folke/which-key.nvim',

@@ -8,6 +8,11 @@ skogix vim
   - [ ] undo "mbbill/undotree",
   - [ ] markdown
   - [ai] ai
+    - [ai] chatgpt 'jackMort/ChatGPT.nvim'
+    - [ai] copilot 'zbirenbaum/copilot.lua'
+    - [ai] copilot-chat 'CopilotC-Nvim/CopilotChat.nvim'
+    - [ai] colorscheme 'catppuccin/nvim'
+    - [ai] cmp 'hrsh7th/nvim-cmp'
     - [?] "huynle/ogpt.nvim"
     - [?] "David-Kunz/gen.nvim"
     - [?] "robitx/gp.nvim"

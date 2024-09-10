@@ -1,4 +1,4 @@
--- This file contains the configuration for the avante.nvim plugin.
+-- This file contains the configuration for the Avante.nvim plugin.
 -- It specifies the plugin's options, events, build instructions, and dependencies.
 
 -- This file contains the configuration for the avante.nvim plugin.

@@ -1,3 +1,6 @@
+-- This file contains the configuration for the Telescope.nvim plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
 local M = {
   "nvim-telescope/telescope.nvim",
   lazy = false,
