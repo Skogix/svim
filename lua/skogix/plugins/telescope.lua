@@ -27,7 +27,6 @@ function M.config()
   local telescope = require("telescope")
   telescope.setup {
     defaults = {
-    defaults = {
       vimgrep_arguments = {
         "rg",
         "--color=never",
