@@ -14,7 +14,6 @@ skogix vim
 		- [ ] "zbirenbaum/copilot.lua",
   - [ ] "folke/noice.nvim"
   - [ ] neorg 'nvim-neorg/neorg'
-  - [ ] colorscheme
   - [ ] harpoon "ThePrimeagen/harpoon"
   - [ ] lualine
   - [ ] treesitter
@@ -24,6 +23,8 @@ skogix vim
   - [/] lazydev
   - [/] telescope
     - [ ] fzf "ibhagwan/fzf-lua",
+  - [ ] docs
+    - [ ] kommentarer, vänta på ai
 
 # done
 - [x] release 0.1
@@ -47,3 +48,6 @@ skogix vim
   - [/] cmp
   - [/] lazydev
   - [/] telescope
+  - [/] docs
+    - [x] lazy
+  - [x] colorscheme 'catppuccin/nvim'
