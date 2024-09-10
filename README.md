@@ -4,17 +4,26 @@ skogix vim
 # todo
 - [ ] helpers/util
 - [ ] plugins
-  - [ ] oil
-  - [/] lazydev
-  - [ ] telescope/fzf
+  - [ ] oil "stevearc/oil.nvim"
   - [ ] ai
-  - [ ] harpoon
+    - [ ] "huynle/ogpt.nvim"
+    - [ ] "David-Kunz/gen.nvim"
+    - [ ] "robitx/gp.nvim"
+    - [ ] "CopilotC-Nvim/CopilotChat.nvim",
+    - [ ] aider
+		- [ ] "zbirenbaum/copilot.lua",
+  - [ ] "folke/noice.nvim"
+  - [ ] neorg 'nvim-neorg/neorg'
+  - [ ] colorscheme
+  - [ ] harpoon "ThePrimeagen/harpoon"
   - [ ] lualine
   - [ ] treesitter
   - [ ] trouble
-- [ ] relase 0.4
+  - [ ] git
   - [/] lsp
-  - [/] cmp
+  - [/] lazydev
+  - [/] telescope
+    - [ ] fzf "ibhagwan/fzf-lua",
 
 # done
 - [x] release 0.1
@@ -33,3 +42,8 @@ skogix vim
   - [x] autocommands
   - [x] keymaps
   - [x] options
+- [/] release 0.4
+  - [/] lsp
+  - [/] cmp
+  - [/] lazydev
+  - [/] telescope
