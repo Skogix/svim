@@ -1,10 +1,11 @@
-function ReloadBuffer()
-  local temp_sync_value = vim.g.aider_buffer_sync                            
-  vim.g.aider_buffer_sync = 0                                                
-  vim.api.nvim_exec2('e!', {output = false})
-  vim.g.aider_buffer_sync = temp_sync_value
-end
-require("skogix.core.options")
-require("skogix.core.lazy")
-require("skogix.core.keymaps")
-require("skogix.core.autocmds")
+-- This is the main initialization file for the Neovim configuration.
+-- It loads the core modules that set up options, lazy loading, keymaps, and autocommands.
+
+require("skogix.core.options")  -- Load and set Neovim options
+require("skogix.core.lazy")     -- Configure lazy loading of plugins
+require("skogix.core.keymaps")  -- Define custom key mappings
+require("skogix.core.autocmds") -- Set up autocommands for various events
+require("skogix.plugins.hello") -- Load the hello function
+
+
+

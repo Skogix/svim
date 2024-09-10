@@ -1,3 +1,6 @@
+-- This file contains the configuration for the harpoon.nvim plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",

@@ -1,4 +1,7 @@
--- uppdatera language server / luals med workspace
+-- This file contains the configuration for the LazyDev.nvim plugin.
+-- It specifies the plugin's options, filetypes, and dependencies.
+
+-- Update language server / luals with workspace
 -- https://github.com/folke/lazydev.nvim
 return {
   {

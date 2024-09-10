@@ -1,16 +1,25 @@
--- Configuration for the aider.nvim plugin
+-- This file contains the configuration for the aider.nvim plugin.
+-- It specifies the plugin's options and keybindings.
+-- This file contains the configuration for the Aider.nvim plugin.
+-- It specifies the plugin's options and keybindings.
+
 return {
-  'joshuavial/aider.nvim',
+  'joshuavial/aider.nvim',  -- The plugin repository
   opts = {
-    -- Automatically manage context
-    auto_manage_context = true,
-    -- Use default key bindings
-    default_bindings = true,
+    auto_manage_context = true,  -- Automatically manage context for the plugin
+    default_bindings = true,     -- Use the default key bindings provided by the plugin
   },
   keys = {
-    -- Keybinding to open Aider
-    { "<leader>aider", "<cmd>lua AiderOpen(dark-mode)<cr>", desc = "[aider] open aider" },
-    -- Keybinding to open Aider in the background
-    { "<leader>abg", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }
+    { "<leader>aider", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },  -- Keybinding to open Aider
+    { "<leader>abg", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
+  },
+  'joshuavial/aider.nvim',  -- The plugin repository
+  opts = {
+    auto_manage_context = true,  -- Automatically manage context for the plugin
+    default_bindings = true,     -- Use the default key bindings provided by the plugin
+  },
+  keys = {
+    { "<leader>aider", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },  -- Keybinding to open Aider
+    { "<leader>abg", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
   },
 }
