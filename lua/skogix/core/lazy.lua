@@ -25,15 +25,15 @@ require("lazy").setup({
     { import = "skogix.plugins.oil" },
     { import = "skogix.plugins.copilot" },
     { import = "skogix.plugins.copilot-chat" },
-    -- { import = "skogix.plugins.gen" },
-    -- { import = "skogix.plugins.gp" },
     { import = "skogix.plugins.harpoon" },
-
-    -- { import = "skogix.plugins.neorg" },
-    -- { import = "skogix.plugins.ogpt" },
     { import = "skogix.plugins.chatgpt" },
     { import = "skogix.plugins.dressing" },
     { import = "skogix.plugins.git" },
+
     -- { import = "skogix.plugins.quickfix" },
+    -- { import = "skogix.plugins.gp" },
+    -- { import = "skogix.plugins.neorg" },
+    -- { import = "skogix.plugins.ogpt" },
+    -- { import = "skogix.plugins.gen" },
   },
 })

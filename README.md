@@ -8,12 +8,11 @@ skogix vim
   - [ ] undo "mbbill/undotree",
   - [ ] markdown
   - [ ] ai
-    - [ ] "huynle/ogpt.nvim"
-    - [ ] "David-Kunz/gen.nvim"
-    - [ ] "robitx/gp.nvim"
+    - [?] "huynle/ogpt.nvim"
+    - [?] "David-Kunz/gen.nvim"
+    - [?] "robitx/gp.nvim"
     - [ ] aider
   - [ ] "folke/noice.nvim"
-  - [ ] dressing
   - [-] neorg 'nvim-neorg/neorg'
   - [-] lualine
   - [ ] treesitter
@@ -22,22 +21,12 @@ skogix vim
   - [/] lazydev
   - [/] ai
   - [/] git
+  - [ ] quickfix
   - [/] telescope
     - [ ] fzf "ibhagwan/fzf-lua",
   - [ ] docs
     - [ ] kommentarer, vänta på ai
-  - [/] release 0.6
-    - [x] harpoon "ThePrimeagen/harpoon"
-    - [x] oil "stevearc/oil.nvim"
-    - [/] git
-      - [x] "pwntester/octo.nvim",
-      - [x] "tpope/vim-fugitive",
-      - [x] "lewis6991/gitsigns.nvim",
-      - [x] "NeogitOrg/neogit",
-    - [/] ai
-      - [x] "CopilotC-Nvim/CopilotChat.nvim"
-      - [x] "zbirenbaum/copilot.lua"
-      - [x] "jackMort/ChatGPT.nvim"
+  - [ ] splitta git.lua
 
 # done
 - [x] release 0.1
@@ -64,3 +53,16 @@ skogix vim
   - [/] docs
     - [x] lazy
   - [x] colorscheme 'catppuccin/nvim'
+- [/] release 0.6
+  - [x] harpoon "ThePrimeagen/harpoon"
+  - [x] oil "stevearc/oil.nvim"
+  - [x] dressing
+  - [/] git
+    - [x] "pwntester/octo.nvim",
+    - [x] "tpope/vim-fugitive",
+    - [x] "lewis6991/gitsigns.nvim",
+    - [x] "NeogitOrg/neogit",
+  - [/] ai
+    - [x] "CopilotC-Nvim/CopilotChat.nvim"
+    - [x] "zbirenbaum/copilot.lua"
+    - [x] "jackMort/ChatGPT.nvim"
