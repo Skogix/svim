@@ -3,8 +3,11 @@ skogix vim
 
 # todo
 - [ ] helpers/util
+- [ ] telescope plugins  
 - [ ] plugins
   - [ ] oil "stevearc/oil.nvim"
+  - [ ] undo "mbbill/undotree",
+  - [ ] markdown
   - [ ] ai
     - [ ] "huynle/ogpt.nvim"
     - [ ] "David-Kunz/gen.nvim"
@@ -14,7 +17,6 @@ skogix vim
 		- [ ] "zbirenbaum/copilot.lua",
   - [ ] "folke/noice.nvim"
   - [ ] neorg 'nvim-neorg/neorg'
-  - [ ] harpoon "ThePrimeagen/harpoon"
   - [ ] lualine
   - [ ] treesitter
   - [ ] trouble
@@ -25,6 +27,8 @@ skogix vim
     - [ ] fzf "ibhagwan/fzf-lua",
   - [ ] docs
     - [ ] kommentarer, vänta på ai
+  - [/] release 0.5
+    - [x] harpoon "ThePrimeagen/harpoon"
 
 # done
 - [x] release 0.1
