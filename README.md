@@ -5,30 +5,39 @@ skogix vim
 - [ ] helpers/util
 - [ ] telescope plugins  
 - [ ] plugins
-  - [ ] oil "stevearc/oil.nvim"
   - [ ] undo "mbbill/undotree",
   - [ ] markdown
   - [ ] ai
     - [ ] "huynle/ogpt.nvim"
     - [ ] "David-Kunz/gen.nvim"
     - [ ] "robitx/gp.nvim"
-    - [ ] "CopilotC-Nvim/CopilotChat.nvim",
     - [ ] aider
-		- [ ] "zbirenbaum/copilot.lua",
   - [ ] "folke/noice.nvim"
-  - [ ] neorg 'nvim-neorg/neorg'
-  - [ ] lualine
+  - [ ] dressing
+  - [-] neorg 'nvim-neorg/neorg'
+  - [-] lualine
   - [ ] treesitter
   - [ ] trouble
-  - [ ] git
   - [/] lsp
   - [/] lazydev
+  - [/] ai
+  - [/] git
   - [/] telescope
     - [ ] fzf "ibhagwan/fzf-lua",
   - [ ] docs
     - [ ] kommentarer, vänta på ai
-  - [/] release 0.5
+  - [/] release 0.6
     - [x] harpoon "ThePrimeagen/harpoon"
+    - [x] oil "stevearc/oil.nvim"
+    - [/] git
+      - [x] "pwntester/octo.nvim",
+      - [x] "tpope/vim-fugitive",
+      - [x] "lewis6991/gitsigns.nvim",
+      - [x] "NeogitOrg/neogit",
+    - [/] ai
+      - [x] "CopilotC-Nvim/CopilotChat.nvim"
+      - [x] "zbirenbaum/copilot.lua"
+      - [x] "jackMort/ChatGPT.nvim"
 
 # done
 - [x] release 0.1
