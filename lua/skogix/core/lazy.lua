@@ -27,7 +27,7 @@ require("lazy").setup({
     -- { import = "skogix.plugins.copilot-chat" },
     -- { import = "skogix.plugins.gen" },
     -- { import = "skogix.plugins.gp" },
-    -- { import = "skogix.plugins.harpoon" },
+    { import = "skogix.plugins.harpoon" },
     -- { import = "skogix.plugins.neorg" },
     -- { import = "skogix.plugins.ogpt" },
   },
