@@ -9,7 +9,7 @@ return {
   },
   keys = {
     -- Keybinding to open Aider
-    { "<leader>aider", "<cmd>lua AiderOpen(dark-mode)<cr>", desc = "[aider] open aider" },
+    { "<leader>aider", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },
     -- Keybinding to open Aider in the background
     { "<leader>abg", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }
   },
