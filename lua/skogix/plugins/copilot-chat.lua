@@ -1,3 +1,6 @@
+-- This file contains the configuration for the CopilotChat.nvim plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
 local M = {}
 ---@param kind string
 function M.pick(kind)

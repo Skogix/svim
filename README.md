@@ -7,7 +7,7 @@ skogix vim
 - [ ] plugins
   - [ ] undo "mbbill/undotree",
   - [ ] markdown
-  - [ ] ai
+  - [ai] ai
     - [?] "huynle/ogpt.nvim"
     - [?] "David-Kunz/gen.nvim"
     - [?] "robitx/gp.nvim"
@@ -48,12 +48,15 @@ skogix vim
   - [x] options
 - [/] release 0.4
   - [/] lsp
-  - [ai] cmp
+  - [ai] cmp 'hrsh7th/nvim-cmp'
   - [/] lazydev
   - [/] telescope
   - [/] docs
     - [x] lazy
   - [ai] colorscheme 'catppuccin/nvim'
+  - [ai] copilot 'zbirenbaum/copilot.lua'
+  - [ai] copilot-chat 'CopilotC-Nvim/CopilotChat.nvim'
+  - [ai] chatgpt 'jackMort/ChatGPT.nvim'
 - [/] release 0.6
   - [x] harpoon "ThePrimeagen/harpoon"
   - [x] oil "stevearc/oil.nvim"
