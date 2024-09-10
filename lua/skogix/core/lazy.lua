@@ -30,6 +30,8 @@ require("lazy").setup({
     { import = "skogix.plugins.dressing" },
     { import = "skogix.plugins.git" },
 
+    { import = "skogix.plugins.aider" },
+
     -- { import = "skogix.plugins.quickfix" },
     -- { import = "skogix.plugins.gp" },
     -- { import = "skogix.plugins.neorg" },
