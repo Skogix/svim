@@ -3,7 +3,8 @@ skogix vim
 
 # todo
 - [ ] helpers/util
-- [ ] telescope plugins  
+- [ ] telescope plugins
+  - [x] telescope.nvim: A highly extendable fuzzy finder over lists. It supports searching files, buffers, and more with a powerful interface.
 - [ ] plugins
   - [ ] undo "mbbill/undotree",
   - [ ] markdown
