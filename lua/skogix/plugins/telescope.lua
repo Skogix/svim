@@ -1,25 +1,31 @@
+-- This file contains the configuration for the Telescope.nvim plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
+-- Define the Telescope plugin configuration
 local M = {
   "nvim-telescope/telescope.nvim",
   lazy = false,
   enabled = true,
-    keys = {
-      { "sg", ":lua require('telescope.builtin').grep_string()<CR>", noremap = true, silent = true, desc = "[telescope] grep string" },
-      { "st", ":lua require('telescope.builtin').treesitter()<CR>", noremap = true, silent = true, desc = "Treesitter" },
-      { "sm", ":lua require('telescope.builtin').marks()<CR>", noremap = true, silent = true, desc = "Marks" },
-      { "s/", ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", noremap = true, silent = true, desc = "Search line buffer" },
-      { "sf", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
-      { "ss", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
-    },
+  keys = {
+    { "sg", ":lua require('telescope.builtin').grep_string()<CR>", noremap = true, silent = true, desc = "[telescope] grep string" },
+    { "st", ":lua require('telescope.builtin').treesitter()<CR>", noremap = true, silent = true, desc = "Treesitter" },
+    { "sm", ":lua require('telescope.builtin').marks()<CR>", noremap = true, silent = true, desc = "Marks" },
+    { "s/", ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", noremap = true, silent = true, desc = "Search line buffer" },
+    { "sf", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
+    { "ss", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
+  },
   dependencies = {
     { "nvim-lua/popup.nvim" },
     { "nvim-lua/plenary.nvim" },
   },
 }
 
+-- Configure the Telescope plugin
 function M.config()
+  -- Load the telescope module
   -- local trouble = require("trouble.sources.telescope")
   local telescope = require("telescope")
-  telescope.setup{
+  telescope.setup {
     defaults = {
       vimgrep_arguments = {
         "rg",
@@ -44,23 +50,19 @@ function M.config()
         height = 0.95,
         preview_cutoff = 120,
       },
-      -- prompt_prefix = "λ -> ",
       prompt_prefix = "   ",
       selection_caret = "▷ ",
       winblend = 0,
       border = {},
       borderchars = {
-        prompt = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
-        -- preview = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
-        -- results = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
-        -- prompt = {" ", " ", " ", " ", " ", " ", " ", " "},
-        preview = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
-        results = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+        prompt = { "━", "┃", "━", "┃", "┏", "┓", "┛", "┗" },
+        preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+        results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
       },
       path_display = {
         filename_first = {
-          reverse_directories = false
-        }
+          reverse_directories = false,
+        },
       },
       set_env = { ["COLORTERM"] = "truecolor" },
       mappings = {
@@ -68,7 +70,7 @@ function M.config()
         --   ["<c-t>"] = trouble.open,
         -- },
         -- n = {
-          --[[ ["<c-t>"] = trouble.open_with_trouble ]]
+        --   ["<c-t>"] = trouble.open_with_trouble
         -- },
       },
     },
@@ -92,14 +94,14 @@ function M.config()
   -- telescope.load_extension('zoxide')
   -- telescope.load_extension("live_grep_args")
 
-  previewers = require('telescope.previewers')
-  builtin = require('telescope.builtin')
+  -- Load required modules
+  local previewers = require('telescope.previewers')
+  local builtin = require('telescope.builtin')
   local conf = require('telescope.config')
+
+  -- Define a custom previewer using delta for git diffs
   local delta = previewers.new_termopen_previewer {
     get_command = function(entry)
-      -- this is for status
-      -- You can get the AM things in entry.status. So we are displaying file if entry.status == '??' or 'A '
-      -- just do an if and return a different command
       if entry.status == ' D' then
         return
       end
@@ -113,6 +115,7 @@ function M.config()
   }
 end
 
+-- Custom Telescope functions for git and notes
 function M.my_git_commits(opts)
   opts = opts or {}
   opts.previewer = delta
@@ -143,7 +146,7 @@ function M.my_git_status(opts)
   builtin.git_status(opts)
 end
 
-function M.my_note(opts)
+function M.my_note()
   builtin.live_grep { prompt_title = ' Note ', cwd = '~/Notes' }
 end
 
@@ -153,12 +156,13 @@ function M.project_files()
   if not ok then require'telescope.builtin'.find_files(opts) end
 end
 
-function M.my_buffers(opts)
-   builtin.buffers {
+function M.my_buffers()
+  builtin.buffers {
     layout_strategy = "vertical",
     ignore_current_buffer = true,
     sort_mru = true
   }
 end
 
+-- Return the module
 return M

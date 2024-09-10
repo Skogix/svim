@@ -42,3 +42,5 @@ luac.out
 lazy-lock.json
 inspiration
 undodir
+.aider*
+.aider.tags.cache.v3

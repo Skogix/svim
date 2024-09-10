@@ -1,3 +1,6 @@
+-- This file contains the configuration for the dressing.nvim plugin.
+-- It specifies the plugin's options, events, and dependencies.
+
 return {
   {
     "stevearc/dressing.nvim",

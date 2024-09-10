@@ -1,3 +1,6 @@
+-- This file contains the configuration for the LSP setup.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
 -- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
 -- https://github.com/williamboman/mason.nvim
 -- https://github.com/williamboman/mason-lspconfig.nvim

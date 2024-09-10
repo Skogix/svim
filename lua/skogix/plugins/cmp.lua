@@ -1,3 +1,6 @@
+-- This file contains the configuration for the nvim-cmp plugin.
+-- It specifies the plugin's options, keybindings, and dependencies.
+
 return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
