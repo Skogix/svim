@@ -5,3 +5,4 @@ require("skogix.core.options")  -- Load and set Neovim options
 require("skogix.core.lazy")     -- Configure lazy loading of plugins
 require("skogix.core.keymaps")  -- Define custom key mappings
 require("skogix.core.autocmds") -- Set up autocommands for various events
+require("skogix.plugins.hello") -- Load the hello function
