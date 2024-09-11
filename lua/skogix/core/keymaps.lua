@@ -1,11 +1,10 @@
 local map = vim.keymap.set
 
-
 -- keys = require("skogix.core.keymaps").whichkey,
 -- ';' till ':' i normal mode
 map("n", ";", ":", { desc = "; -> :" })
 -- rensa 's' i normal för search
--- map("n", "s", "<Nop>", { desc = "" })
+map("n", "s", "<Nop>", { desc = "" })
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'focus left' })
 map('n', '<C-l>', '<C-w><C-l>', { desc = 'focus right' })
 map('n', '<C-j>', '<C-w><C-j>', { desc = 'focus up' })
