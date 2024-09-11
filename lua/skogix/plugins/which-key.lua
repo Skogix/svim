@@ -15,15 +15,5 @@ return {
   debug = true,
   -- TODO: options/config
   opts = {},
-  keys = {
-    -- NOTE: visar lokala binds för buffern
-    {
-      "<leader>?",
-      function()
-        require("which-key").show({ global = false })
-      end,
-      desc = "[which-key] show buffer keybindings",
-    },
-    {"<leader>s", group = "search"},
-  },
+  keys = require("skogix.core.keymaps").whichkey,
 }
