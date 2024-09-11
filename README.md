@@ -2,6 +2,12 @@
 skogix vim
 
 # todo
+- [ ] toggle term
+- [ ] avante
+- [ ] nvim-bqf
+- [ ] lualine
+- [ ] neogen
+---
 - [ ] helpers/util
 - [ ] lazygit to git
 - [ ] telescope plugins
