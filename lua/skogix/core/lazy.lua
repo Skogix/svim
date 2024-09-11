@@ -14,11 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
+    { import = "skogix.plugins.cmp" },
+    { import = "skogix.plugins.telescope" },
     { import = "skogix.plugins.which-key" },
     { import = "skogix.plugins.lazydev" },
     { import = "skogix.plugins.lsp" },
-    { import = "skogix.plugins.cmp" },
-    { import = "skogix.plugins.telescope" },
     { import = "skogix.plugins.colorscheme" },
     { import = "skogix.plugins.oil" },
     { import = "skogix.plugins.copilot" },
@@ -27,9 +27,10 @@ require("lazy").setup({
     { import = "skogix.plugins.chatgpt" },
     { import = "skogix.plugins.dressing" },
     { import = "skogix.plugins.git" },
-
     { import = "skogix.plugins.aider" },
     { import = "skogix.plugins.avante" },
+    { import = "skogix.plugins.quickfix" },
+    { import = "skogix.plugins.fzf" },
 
     { import = "skogix.plugins.lazygit" },
 
