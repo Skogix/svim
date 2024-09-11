@@ -29,6 +29,8 @@ require("lazy").setup({
     -- { import = "skogix.plugins.codeium" },
 
     { import = "skogix.plugins.lazygit" },
+    { import = "skogix.plugins.bufferline" },
+    { import = "skogix.plugins.cokeline" },
     -- { import = "skogix.plugins.neoai" },
     -- { import = "skogix.plugins.enlighten" },
 
