@@ -44,3 +44,6 @@ inspiration
 undodir
 .aider*
 .aider.tags.cache.v3
+copilot-system-prompt
+copilot-help
+copilot-chat
