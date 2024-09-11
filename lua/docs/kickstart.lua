@@ -378,7 +378,7 @@ require('lazy').setup({
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
-      require('telescope').setup {
+      require('lua.skogix.todo.telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
@@ -396,8 +396,8 @@ require('lazy').setup({
       }
 
       -- Enable Telescope extensions if they are installed
-      pcall(require('telescope').load_extension, 'fzf')
-      pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('lua.skogix.todo.telescope').load_extension, 'fzf')
+      pcall(require('lua.skogix.todo.telescope').load_extension, 'ui-select')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -746,7 +746,7 @@ require('lazy').setup({
     },
     config = function()
       -- See `:help cmp`
-      local cmp = require 'cmp'
+      local cmp = require 'lua.skogix.todo.cmp'
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
