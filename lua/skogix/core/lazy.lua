@@ -31,6 +31,8 @@ require("lazy").setup({
     { import = "skogix.plugins.aider" },
     { import = "skogix.plugins.avante" },
 
+    { import = "skogix.plugins.lazygit" },
+
     -- { import = "skogix.plugins.quickfix" },
     -- { import = "skogix.plugins.gp" },
     -- { import = "skogix.plugins.neorg" },

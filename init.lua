@@ -8,4 +8,3 @@ require("skogix.core.autocmds") -- Set up autocommands for various events
 require("skogix.plugins.hello") -- Load the hello function
 
 
-
