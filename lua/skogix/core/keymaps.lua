@@ -13,6 +13,7 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'focus down' })
 map('n', '<S-h>', 'next buffer', { desc = 'focus down' })
 map('n', '<S-l>', 'next buffer', { desc = 'focus down' })
 
+
 -- Copy paste
 vim.keymap.set({ 'n', 'x' }, '<leader>y', [["+y]]) -- copy to system clipboard
 vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]]) -- paste from system clipboard

@@ -26,8 +26,10 @@ require("lazy").setup({
 		{ import = "skogix.plugins.git" },
 		{ import = "skogix.plugins.harpoon" },
 		{ import = "skogix.plugins.chatgpt" },
-		-- { import = "skogix.plugins.lualine" },
-		{ import = "skogix.plugins.bufferline" },
+
+		{ import = "skogix.plugins.lualine" },
+		{ import = "skogix.plugins.noice" },
+		-- { import = "skogix.plugins.bufferline" },
 
 		-- { import = "skogix.plugins.aider" },
 		-- { import = "skogix.plugins.avante" },
