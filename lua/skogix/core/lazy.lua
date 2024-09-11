@@ -29,6 +29,10 @@ require("lazy").setup({
 		{ import = "skogix.plugins.lualine" },
 		-- { import = "skogix.plugins.bufferline" },
 
+		{ import = "skogix.plugins.lualine" },
+		{ import = "skogix.plugins.noice" },
+		-- { import = "skogix.plugins.bufferline" },
+
 		-- { import = "skogix.plugins.aider" },
 		-- { import = "skogix.plugins.avante" },
 		-- { import = "skogix.plugins.codeium" },
