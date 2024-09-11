@@ -21,11 +21,6 @@ require("lazy").setup({
     { import = "skogix.plugins.telescope" },
     { import = "skogix.plugins.colorscheme" },
     { import = "skogix.plugins.oil" },
-    { import = "skogix.plugins.copilot" },
-    { import = "skogix.plugins.copilot-chat" },
-    { import = "skogix.plugins.harpoon" },
-    { import = "skogix.plugins.chatgpt" },
-    { import = "skogix.plugins.dressing" },
     { import = "skogix.plugins.git" },
 
     { import = "skogix.plugins.aider" },

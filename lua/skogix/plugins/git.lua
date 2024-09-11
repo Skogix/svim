@@ -92,6 +92,15 @@ return {
       { "<leader>oj", "<cmd>Octo pr checks<CR>", desc = "Octo PR checks" },
       { "<leader>ol", "<cmd>Octo pr commits<CR>", desc = "Octo PR list commits" },
       { "<leader>or", "<cmd>Octo pr reload<CR>", desc = "Octo PR reload" },
+          ["<leader>git"] = {
+            function(plugin)
+              require("lazy.util").float_term({ "lazygit", "log" }, {
+                cwd = plugin.dir,
+              })
+            end,
+            desc = "Open lazygit log",
+          },
     },
   },
+
 }
