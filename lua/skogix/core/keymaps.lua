@@ -179,6 +179,23 @@ M.whichkey = function()
   }
 end
 
+
+M.lsp = function()
+  local telescope = require('telescope')
+  return {
+    {'gd', telescope.lsp_definitions , desc = '[G]oto [D]efinition'},
+    {'gr', telescope.lsp_references , desc = '[G]oto [R]eferences'},
+    {'gI', telescope.lsp_implementations , desc = '[G]oto [I]mplementation'},
+    {'<leader>D', telescope.lsp_type_definitions , desc = 'Type [D]efinition'},
+    {'<leader>ds', telescope.lsp_document_symbols , desc = '[D]ocument [S]ymbols'},
+    {'<leader>ws', telescope.lsp_dynamic_workspace_symbols , desc = '[W]orkspace [S]ymbols'},
+    -- {'<leader>rn', function() vim.lsp.buf.rename end, desc = '[R]e[n]ame'},
+    -- {'<leader>ca', function() vim.lsp.buf.code_action end, desc = '[C]ode [A]ction', { 'n', 'x' }},
+    -- {'gD', function() vim.lsp.buf.declaration end, desc = '[G]oto [D]eclaration'},
+  }
+end
+
+
 M.chatgpt = function()
   return {
     { '<leader>cc', '<cmd>ChatGPT<cr>', desc = 'ChatGPT' },
