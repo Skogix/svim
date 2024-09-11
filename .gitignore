@@ -45,6 +45,6 @@ undodir
 .aider*
 .aider.tags.cache.v3
 BqfPreviewScrollBar
-copilot-system-prompt
-copilot-help
 copilot-chat
+copilot-help
+copilot-system-prompt
