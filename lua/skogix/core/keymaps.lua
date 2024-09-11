@@ -5,14 +5,114 @@ map("n", ";", ":", { desc = "; -> :" })
 -- rensa 's' i normal för search
 map("n", "s", "<Nop>", { desc = "" })
 
-map("n", "s", "<cmd>echo 'test'<cr>", { desc = "skriver ut test" })
-
 local M = {}
 
--- template för which-key:
-M.testkeys = function()
+M.fzf = function()
   return {
-    {"<leader>s", "<cmd>echo 'test'<cr>", desc = "skriver ut test" }
+      { "<c-j>", "<c-j>", ft = "fzf", mode = "t", nowait = true },
+      { "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
+      {
+        "<leader>,",
+        "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
+        desc = "Switch Buffer",
+      },
+      { "<leader>b", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
+      { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+      { "ss", "<cmd>FzfLua git_files<cr>", desc = "[fzf] search git files" },
+
+      { "sg", "<cmd>FzfLua live_grep<cr>", desc = "[fzf] search git files" },
+      -- { "<leader>/", LazyVim.pick("live_grep"), desc = Grep (Root Dir)" },
+      -- { "<leader><space>", LazyVim.pick("auto"), desc = "Find Files (Root Dir)" },
+      -- find
+      -- { "<leader>fc", LazyVim.pick.config_files(), desc = "Find Config File" },
+      -- { "<leader>ff", LazyVim.pick("auto"), desc = "Find Files (Root Dir)" },
+      -- { "<leader>fF", LazyVim.pick("auto", { root = false }), desc = "Find Files (cwd)" },
+      { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
+      { "<leader>fr", "<cmd>FzfLua oldfiles<cr>", desc = "Recent" },
+      -- { "<leader>fR", LazyVim.pick("oldfiles", { cwd = vim.uv.cwd() }), desc = "Recent (cwd)" },
+      -- git
+      { "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "Commits" },
+      { "<leader>gs", "<cmd>FzfLua git_status<CR>", desc = "Status" },
+      -- search
+      { '<leader>s"', "<cmd>FzfLua registers<cr>", desc = "Registers" },
+      { "<leader>sa", "<cmd>FzfLua autocmds<cr>", desc = "Auto Commands" },
+      { "<leader>sb", "<cmd>FzfLua grep_curbuf<cr>", desc = "Buffer" },
+      { "<leader>sc", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+      { "<leader>sC", "<cmd>FzfLua commands<cr>", desc = "Commands" },
+      { "<leader>sd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Document Diagnostics" },
+      { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace Diagnostics" },
+      -- { "<leader>sg", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+      -- { "<leader>sG", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
+      { "<leader>sh", "<cmd>FzfLua help_tags<cr>", desc = "Help Pages" },
+      { "<leader>sH", "<cmd>FzfLua highlights<cr>", desc = "Search Highlight Groups" },
+      { "<leader>sj", "<cmd>FzfLua jumps<cr>", desc = "Jumplist" },
+      { "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
+      { "<leader>sl", "<cmd>FzfLua loclist<cr>", desc = "Location List" },
+      { "<leader>sM", "<cmd>FzfLua man_pages<cr>", desc = "Man Pages" },
+      { "<leader>sm", "<cmd>FzfLua marks<cr>", desc = "Jump to Mark" },
+      { "<leader>sR", "<cmd>FzfLua resume<cr>", desc = "Resume" },
+      { "<leader>sq", "<cmd>FzfLua quickfix<cr>", desc = "Quickfix List" },
+      -- { "<leader>sw", LazyVim.pick("grep_cword"), desc = "Word (Root Dir)" },
+      -- { "<leader>sW", LazyVim.pick("grep_cword", { root = false }), desc = "Word (cwd)" },
+      -- { "<leader>sw", LazyVim.pick("grep_visual"), mode = "v", desc = "Selection (Root Dir)" },
+      -- { "<leader>sW", LazyVim.pick("grep_visual", { root = false }), mode = "v", desc = "Selection (cwd)" },
+      -- { "<leader>uC", LazyVim.pick("colorschemes"), desc = "Colorscheme with Preview" },
+      {
+        "<leader>ss",
+        function()
+          require("fzf-lua").lsp_document_symbols({
+            regex_filter = symbols_filter,
+          })
+        end,
+        desc = "Goto Symbol",
+      },
+      {
+        "<leader>sS",
+        function()
+          require("fzf-lua").lsp_live_workspace_symbols({
+            regex_filter = symbols_filter,
+          })
+        end,
+        desc = "Goto Symbol (Workspace)",
+      }
+    }
+end
+
+M.telescope = function()
+  return {
+    { "sg", ":lua require('telescope.builtin').grep_string()<CR>", noremap = true, silent = true, desc = "[telescope] grep string" },
+    { "st", ":lua require('telescope.builtin').treesitter()<CR>", noremap = true, silent = true, desc = "Treesitter" },
+    { "sm", ":lua require('telescope.builtin').marks()<CR>", noremap = true, silent = true, desc = "Marks" },
+    { "s/", ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", noremap = true, silent = true, desc = "Search line buffer" },
+    { "sf", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
+    { "ss", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
+  }
+end
+-- template för which-key:
+M.whichkey = function()
+  return {
+    -- NOTE: visar lokala binds för buffern
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "[which-key] show buffer keybindings",
+    },
+    {"<leader>s", group = "search"},
+  }
+end
+
+M.chatgpt = function()
+  return {
+    { '<leader>cc', '<cmd>ChatGPT<cr>', desc = 'ChatGPT' },
+    { '<leader>ce', '<cmd>ChatGPTEditWithInstruction<cr>', desc = 'Edit with Instruction', mode = { 'n', 'v' } },
+    { '<leader>cd', '<cmd>ChatGPTRun docstring<cr>', desc = 'Docstring', mode = { 'n', 'v' } },
+    { '<leader>cf', '<cmd>ChatGPTRun fix_bugs<cr>', desc = 'Fix Bugs', mode = { 'n', 'v' } },
+    { '<leader>cg', '<cmd>ChatGPTRun grammar_correction<cr>', desc = 'Grammar Correction', mode = { 'n', 'v' } },
+    { '<leader>ck', '<cmd>ChatGPTRun keywords<cr>', desc = 'Extract Keywords', mode = { 'n', 'v' } },
+    { '<leader>ct', '<cmd>ChatGPTRun add_tests<cr>', desc = 'Add Tests', mode = { 'n', 'v' } },
+    { '<leader>cx', '<cmd>ChatGPTRun explain_code<cr>', desc = 'Explain Code', mode = { 'n', 'v' } },
   }
 end
 

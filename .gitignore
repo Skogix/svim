@@ -44,7 +44,7 @@ inspiration
 undodir
 .aider*
 .aider.tags.cache.v3
-copilot-system-prompt
-copilot-help
-copilot-chat
 BqfPreviewScrollBar
+copilot-chat
+copilot-help
+copilot-system-prompt
