@@ -24,6 +24,18 @@ M.aider = function() return {
   { "<leader>abc", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
 } end
 
+M.bufferline = function()
+  return {
+    { '<leader>bp', '<Cmd>BufferLineTogglePin<CR>', desc = 'Toggle Pin' },
+    { '<leader>bP', '<Cmd>BufferLineGroupClose ungrouped<CR>', desc = 'Delete Non-Pinned Buffers' },
+    { '<leader>bo', '<Cmd>BufferLineCloseOthers<CR>', desc = 'Delete Other Buffers' },
+    { '<leader>br', '<Cmd>BufferLineCloseRight<CR>', desc = 'Delete Buffers to the Right' },
+    { '<leader>bl', '<Cmd>BufferLineCloseLeft<CR>', desc = 'Delete Buffers to the Left' },
+    { '<leader>tp', '<Cmd>BufferLinePick<CR>', desc = 'Tab Pick' },
+    { '[B', '<cmd>BufferLineMovePrev<cr>', desc = 'Move buffer prev' },
+    { ']B', '<cmd>BufferLineMoveNext<cr>', desc = 'Move buffer next' },
+  } end
+
 M.octo = function()
   return {
     { "<leader>gh", "<cmd>Octo<CR>", desc = "Open Octo" },

@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	spec = {
+		{ import = "skogix.plugins.treesitter" },
 		{ import = "skogix.plugins.cmp" },
 		{ import = "skogix.plugins.telescope" },
 		{ import = "skogix.plugins.fzf" },
@@ -25,21 +26,20 @@ require("lazy").setup({
 		{ import = "skogix.plugins.git" },
 		{ import = "skogix.plugins.harpoon" },
 		{ import = "skogix.plugins.chatgpt" },
+		-- { import = "skogix.plugins.lualine" },
+		{ import = "skogix.plugins.bufferline" },
 
 		-- { import = "skogix.plugins.aider" },
 		-- { import = "skogix.plugins.avante" },
 		-- { import = "skogix.plugins.codeium" },
 
 		{ import = "skogix.plugins.lazygit" },
-		{ import = "skogix.plugins.bufferline" },
 		{ import = "skogix.plugins.cokeline" },
-		{ import = "skogix.plugins.lualine" },
 		-- { import = "skogix.plugins.neoai" },
 		-- { import = "skogix.plugins.enlighten" },
 
 		-- { import = "skogix.plugins.quickfix" },
 		-- { import = "skogix.plugins.gp" },
-		-- { import = "skogix.plugins.treesitter" },
 		{ import = "skogix.plugins.neorg" },
 		-- { import = "skogix.plugins.ogpt" },
 		-- { import = "skogix.plugins.gen" },
