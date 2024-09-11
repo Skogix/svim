@@ -1,11 +1,58 @@
 local map = vim.keymap.set
 
+
+-- keys = require("skogix.core.keymaps").whichkey,
 -- ';' till ':' i normal mode
 map("n", ";", ":", { desc = "; -> :" })
 -- rensa 's' i normal för search
 map("n", "s", "<Nop>", { desc = "" })
 
 local M = {}
+
+M.octo = function()
+    return {
+      { "<leader>gh", "<cmd>Octo<CR>", desc = "Open Octo" },
+      { "<leader>oo", "<cmd>Octo pr list<CR>", desc = "Octo PR list all" },
+      { "<leader>oc", "<cmd>Octo pr create<CR>", desc = "Octo PR create" },
+      { "<leader>om", "<cmd>Octo pr merge squash delete<CR>", desc = "Octo PR merge" },
+      { "<leader>ov", "<cmd>Octo pr browser<CR>", desc = "Octo PR open in browser" },
+      { "<leader>oh", "<cmd>Octo pr checkout<CR>", desc = "Octo PR checkout" },
+      { "<leader>ox", "<cmd>Octo pr create draft<CR>", desc = "Octo PR create draft" },
+      { "<leader>od", "<cmd>Octo pr diff<CR>", desc = "Octo PR diff" },
+      { "<leader>oy", "<cmd>Octo pr url<CR>", desc = "Octo PR copy URL" },
+      { "<leader>of", "<cmd>Octo pr changes<CR>", desc = "Octo PR list changed files" },
+      { "<leader>oj", "<cmd>Octo pr checks<CR>", desc = "Octo PR checks" },
+      { "<leader>ol", "<cmd>Octo pr commits<CR>", desc = "Octo PR list commits" },
+      { "<leader>or", "<cmd>Octo pr reload<CR>", desc = "Octo PR reload" },
+          ["<leader>git"] = {
+            function(plugin)
+              require("lazy.util").float_term({ "lazygit", "log" }, {
+                cwd = plugin.dir,
+              })
+            end,
+            desc = "Open lazygit log",
+          },
+    }
+end
+
+M.neogit = function()
+return {
+      { "<leader>gg", "<cmd>Neogit<CR>", desc = "Git" },
+      { "<leader>gdd", "<cmd>DiffviewOpen<CR>", desc = "Git Diff Open" },
+      { "<leader>gdc", "<cmd>DiffviewClose<CR>", desc = "Git Diff Close" },
+      { "<leader>gdh", "<cmd>DiffviewFileHistory %<CR>", desc = "Git Diff Current File History" },
+      { "<leader>gda", "<cmd>DiffviewFileHistory<CR>", desc = "Git Diff All File History" },
+      { "<leader>gp", "<cmd>Neogit push<CR>", desc = "Git Push" },
+    }
+end
+M.fugitive = function()
+  return {
+    { "<leader>gv", "<cmd>GBrowse<CR>", desc = "Git View in Browser" },
+    -- { "<leader>gd", "<cmd>Gvdiffsplit<CR>", desc = "Git Diff" },
+    { "<leader>gr", "<cmd>Gread<CR>", desc = "Git Read" },
+    { "<leader>gw", "<cmd>Gwrite<CR>", desc = "Git Write" },
+  }
+end
 
 M.fzf = function()
   return {
@@ -88,6 +135,7 @@ M.telescope = function()
     { "ss", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", noremap = true, silent = true, desc = "Find files" },
   }
 end
+
 -- template för which-key:
 M.whichkey = function()
   return {
@@ -103,17 +151,17 @@ M.whichkey = function()
   }
 end
 
--- M.chatgpt = function()
---   return {
---     { '<leader>cc', '<cmd>ChatGPT<cr>', desc = 'ChatGPT' },
---     { '<leader>ce', '<cmd>ChatGPTEditWithInstruction<cr>', desc = 'Edit with Instruction', mode = { 'n', 'v' } },
---     { '<leader>cd', '<cmd>ChatGPTRun docstring<cr>', desc = 'Docstring', mode = { 'n', 'v' } },
---     { '<leader>cf', '<cmd>ChatGPTRun fix_bugs<cr>', desc = 'Fix Bugs', mode = { 'n', 'v' } },
---     { '<leader>cg', '<cmd>ChatGPTRun grammar_correction<cr>', desc = 'Grammar Correction', mode = { 'n', 'v' } },
---     { '<leader>ck', '<cmd>ChatGPTRun keywords<cr>', desc = 'Extract Keywords', mode = { 'n', 'v' } },
---     { '<leader>ct', '<cmd>ChatGPTRun add_tests<cr>', desc = 'Add Tests', mode = { 'n', 'v' } },
---     { '<leader>cx', '<cmd>ChatGPTRun explain_code<cr>', desc = 'Explain Code', mode = { 'n', 'v' } },
---   }
--- end
+M.chatgpt = function()
+  return {
+    { '<leader>cc', '<cmd>ChatGPT<cr>', desc = 'ChatGPT' },
+    { '<leader>ce', '<cmd>ChatGPTEditWithInstruction<cr>', desc = 'Edit with Instruction', mode = { 'n', 'v' } },
+    { '<leader>cd', '<cmd>ChatGPTRun docstring<cr>', desc = 'Docstring', mode = { 'n', 'v' } },
+    { '<leader>cf', '<cmd>ChatGPTRun fix_bugs<cr>', desc = 'Fix Bugs', mode = { 'n', 'v' } },
+    { '<leader>cg', '<cmd>ChatGPTRun grammar_correction<cr>', desc = 'Grammar Correction', mode = { 'n', 'v' } },
+    { '<leader>ck', '<cmd>ChatGPTRun keywords<cr>', desc = 'Extract Keywords', mode = { 'n', 'v' } },
+    { '<leader>ct', '<cmd>ChatGPTRun add_tests<cr>', desc = 'Add Tests', mode = { 'n', 'v' } },
+    { '<leader>cx', '<cmd>ChatGPTRun explain_code<cr>', desc = 'Explain Code', mode = { 'n', 'v' } },
+  }
+end
 
 return M
