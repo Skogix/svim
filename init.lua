@@ -31,7 +31,8 @@ local modules = {
 
     -- -- Additional modules
     ["skogix.todo.recorder"] = false,
-    -- ["aider"] = true,
+    ["skogix.todo.aider"] = true,
+    ["skogix.todo.toggleterm"] = true,
     -- ["avante"] = true,
     -- ["bufferline"] = true,
     -- ["codeium"] = true,
