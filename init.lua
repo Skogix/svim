@@ -9,7 +9,7 @@ local function load_module(module_name, should_load)
 end
 
 -- Configuration for toggling modules
-local modules = {
+_G.modules = {
     -- Core modules
     ["skogix.core.options"] = true,
     ["skogix.core.lazy"] = true,
@@ -18,7 +18,7 @@ local modules = {
 }
 
 -- Plugin modules
-local plugins = {
+_G.plugins = {
     ["skogix.plugins.chatgpt"] = true,
     ["skogix.plugins.cmp"] = true,
     ["skogix.plugins.colorscheme"] = true,
