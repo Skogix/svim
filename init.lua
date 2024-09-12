@@ -30,6 +30,7 @@ local modules = {
     ["skogix.plugins.which-key"] = true,
 
     -- -- Additional modules
+    ["skogix.todo.recorder"] = false,
     -- ["aider"] = true,
     -- ["avante"] = true,
     -- ["bufferline"] = true,
