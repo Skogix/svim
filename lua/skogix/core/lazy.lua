@@ -12,6 +12,15 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+local plugins = require("init")
+
+local specs = {}
+for plugin_name, should_load in pairs(plugins) do
+    if should_load then
+        table.insert(specs, { import = plugin_name })
+    end
+end
+
 require("lazy").setup({
 	spec = {
 		{ import = "skogix.plugins" },

@@ -15,8 +15,10 @@ local modules = {
     ["skogix.core.lazy"] = true,
     ["skogix.core.keymaps"] = true,
     ["skogix.core.autocmds"] = true,
+}
 
-    -- Addon modules
+-- Plugin modules
+local plugins = {
     ["skogix.plugins.chatgpt"] = true,
     ["skogix.plugins.cmp"] = true,
     ["skogix.plugins.colorscheme"] = true,
@@ -56,6 +58,14 @@ local modules = {
     -- ["quickfix"] = true,
     -- ["winbar"] = true,
 }
+
+-- Load all modules based on configuration
+for module_name, should_load in pairs(modules) do
+    load_module(module_name, should_load)
+end
+
+-- Return plugins configuration for lazy loading
+return plugins
 
 -- Load all modules based on configuration
 for module_name, should_load in pairs(modules) do
