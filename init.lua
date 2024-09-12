@@ -1,13 +1,7 @@
--- Function to conditionally load modules with error handling
-local function load_module(module_name, should_load)
-    if should_load then
-        local success, err = pcall(require, module_name)
-        if not success then
-            vim.notify("Failed to load module: " .. module_name .. "\nError: " .. err, vim.log.levels.ERROR)
-        end
-    end
-end
-
+require("skogix.core.options")
+require("skogix.core.lazy")
+require("skogix.core.keymaps")
+require("skogix.core.autocmds")
 -- Configuration for toggling modules
 _G.modules = {
     -- Core modules
@@ -32,9 +26,9 @@ _G.plugins = {
     ["skogix.plugins.which-key"] = true,
 
     -- -- Additional modules
-    ["skogix.todo.recorder"] = false,
-    ["skogix.todo.aider"] = true,
-    ["skogix.todo.toggleterm"] = true,
+    -- ["skogix.todo.recorder"] = false,
+    -- ["skogix.todo.aider"] = true,
+    -- ["skogix.todo.toggleterm"] = true,
     -- ["skogix.dev.editor.terminal.toggleterm"] = true,
     -- ["avante"] = true,
     -- ["bufferline"] = true,

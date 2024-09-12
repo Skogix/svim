@@ -12,7 +12,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require("init")
+local plugins = require("init").plugins
 
 local specs = {}
 for plugin_name, should_load in pairs(plugins) do
@@ -24,35 +24,7 @@ end
 require("lazy").setup({
 	spec = {
 		{ import = "skogix.plugins" },
-		-- { import = "skogix.plugins.cmp" },
-		-- { import = "skogix.plugins.telescope" },
-		-- { import = "skogix.plugins.fzf" },
-		-- { import = "skogix.plugins.which-key" },
-		-- { import = "skogix.plugins.lazydev" },
-		-- { import = "skogix.plugins.lsp" },
-		-- { import = "skogix.plugins.colorscheme" },
-		-- { import = "skogix.plugins.oil" },
-		-- { import = "skogix.plugins.git" },
-		-- { import = "skogix.plugins.harpoon" },
-		-- { import = "skogix.plugins.chatgpt" },
-
-		-- { import = "skogix.plugins.lualine" },
-		-- { import = "skogix.plugins.noice" },
-		-- { import = "skogix.plugins.bufferline" },
-
-		-- { import = "skogix.plugins.aider" },
-		-- { import = "skogix.plugins.avante" },
-		-- { import = "skogix.plugins.codeium" },
-
-		-- { import = "skogix.plugins.lazygit" },
-		-- { import = "skogix.plugins.cokeline" },
-		-- { import = "skogix.plugins.neoai" },
-		-- { import = "skogix.plugins.enlighten" },
-
-		-- { import = "skogix.plugins.quickfix" },
-		-- { import = "skogix.plugins.gp" },
-		-- { import = "skogix.plugins.neorg" },
-		-- { import = "skogix.plugins.ogpt" },
-		-- { import = "skogix.plugins.gen" },
+    { import = "skogix.todo.aider" },
+    { import = "skogix.todo.toggleterm" },
 	},
 })

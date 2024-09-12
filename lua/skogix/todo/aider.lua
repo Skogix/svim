@@ -7,6 +7,8 @@
 return {
   'joshuavial/aider.nvim',  -- The plugin repository
   lazy = false,
+  enable = true,
+  config = true,
   opts = {
     auto_manage_context = true,  -- Automatically manage context for the plugin
     default_bindings = true,     -- Use the default key bindings provided by the plugin
