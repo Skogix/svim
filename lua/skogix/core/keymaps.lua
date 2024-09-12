@@ -18,6 +18,12 @@ map('n', '<S-l>', 'next buffer', { desc = 'focus down' })
 vim.keymap.set({ 'n', 'x' }, '<leader>y', [["+y]]) -- copy to system clipboard
 vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]]) -- paste from system clipboard
 
+-- tabs
+map("n", "]<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+map("n", "[<tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+map("n", "<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+map("n", "<s-tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+
 local M = {}
 
 M.aider = function() return {
