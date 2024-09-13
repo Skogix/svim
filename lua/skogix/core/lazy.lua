@@ -12,38 +12,16 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-	spec = {
-		{ import = "skogix.plugins" },
-		-- { import = "skogix.plugins.cmp" },
-		-- { import = "skogix.plugins.telescope" },
-		-- { import = "skogix.plugins.fzf" },
-		-- { import = "skogix.plugins.which-key" },
-		-- { import = "skogix.plugins.lazydev" },
-		-- { import = "skogix.plugins.lsp" },
-		-- { import = "skogix.plugins.colorscheme" },
-		-- { import = "skogix.plugins.oil" },
-		-- { import = "skogix.plugins.git" },
-		-- { import = "skogix.plugins.harpoon" },
-		-- { import = "skogix.plugins.chatgpt" },
+-- Load plugins from a separate file to avoid circular dependency
+local plugins = require("skogix.core.plugins") -- Change this line
 
-		-- { import = "skogix.plugins.lualine" },
-		-- { import = "skogix.plugins.noice" },
-		-- { import = "skogix.plugins.bufferline" },
+local specs = {
+  {import = "skogix.plugins"},
+}
+for plugin_name, should_load in pairs(plugins) do
+    if should_load then
+        table.insert(specs, { import = plugin_name })
+    end
+end
 
-		-- { import = "skogix.plugins.aider" },
-		-- { import = "skogix.plugins.avante" },
-		-- { import = "skogix.plugins.codeium" },
-
-		-- { import = "skogix.plugins.lazygit" },
-		-- { import = "skogix.plugins.cokeline" },
-		-- { import = "skogix.plugins.neoai" },
-		-- { import = "skogix.plugins.enlighten" },
-
-		-- { import = "skogix.plugins.quickfix" },
-		-- { import = "skogix.plugins.gp" },
-		-- { import = "skogix.plugins.neorg" },
-		-- { import = "skogix.plugins.ogpt" },
-		-- { import = "skogix.plugins.gen" },
-	},
-})
+require("lazy").setup(specs)
