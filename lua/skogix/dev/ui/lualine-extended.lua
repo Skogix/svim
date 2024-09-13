@@ -66,4 +66,4 @@ return {
       "symbols-outline",
     }
   end,
-}zy
+}
