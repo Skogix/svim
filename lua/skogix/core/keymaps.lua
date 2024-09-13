@@ -27,8 +27,8 @@ map("n", "<s-tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 local M = {}
 
 M.aider = function() return {
-  { "<leader>pp", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },  -- Keybinding to open Aider
-  { "<leader>yy", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
+  { "<leader>aider", "<cmd>lua AiderOpen()<cr>", desc = "[aider] open aider" },  -- Keybinding to open Aider
+  { "<leader>aider2", "<cmd>lua AiderBackground()<cr>", desc = "[aider] open aider in background" }  -- Keybinding to open Aider in the background
 } end
 
 M.bufferline = function()

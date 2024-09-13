@@ -12,19 +12,16 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require("init").plugins
+-- Load plugins from a separate file to avoid circular dependency
+local plugins = require("skogix.core.plugins") -- Change this line
 
-local specs = {}
+local specs = {
+  {import = "skogix.plugins"},
+}
 for plugin_name, should_load in pairs(plugins) do
     if should_load then
         table.insert(specs, { import = plugin_name })
     end
 end
 
-require("lazy").setup({
-	spec = {
-		{ import = "skogix.plugins" },
-    { import = "skogix.todo.aider" },
-    { import = "skogix.todo.toggleterm" },
-	},
-})
+require("lazy").setup(specs)
