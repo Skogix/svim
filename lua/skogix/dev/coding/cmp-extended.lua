@@ -1,4 +1,4 @@
-local cmp = require("lua.skogix.todo.cmp")
+local cmp = require("skogix.plugins.cmp")
 
 return {
   "hrsh7th/nvim-cmp",

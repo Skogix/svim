@@ -1,7 +1,7 @@
 return {
   "dharmx/telescope-media.nvim",
   config = function()
-    LazyVim.on_load("telescope.nvim", function()
+    require("skogix.core.functions").on_load("telescope.nvim", function()
       require("lua.skogix.todo.telescope").setup({
         extensions = {
           media = {

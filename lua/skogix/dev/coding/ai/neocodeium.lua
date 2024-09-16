@@ -2,7 +2,7 @@ return {
   "monkoose/neocodeium",
   event = "InsertEnter",
   config = function()
-    local cmp = require("lua.skogix.todo.cmp")
+    local cmp = require("skogix.plugins.cmp")
     local neocodeium = require("neocodeium")
     neocodeium.setup()
 

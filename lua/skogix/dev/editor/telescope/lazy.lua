@@ -1,11 +1,11 @@
 return {
-  "tsakirist/telescope-lazy.nvim",
-  config = function()
-    LazyVim.on_load("telescope.nvim", function()
-      require("lua.skogix.todo.telescope").load_extension("lazy")
-    end)
-  end,
-  keys = {
-    { "<leader>sp", "<cmd>Telescope lazy<CR>", desc = "Plugins (Lazy)" },
-  },
+	"tsakirist/telescope-lazy.nvim",
+	lazy = false,
+	dependencies = {
+		"nvim-telescope/telescope.nvim",
+	},
+	config = function()
+		require("telescope").load_extension("lazy")
+	end,
+	keys = require("skogix.core.keymaps").telescopelazy,
 }

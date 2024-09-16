@@ -4,16 +4,17 @@
 -- Show keybinds on keypress
 -- https://github.com/folke/which-key.nvim
 return {
-  'folke/which-key.nvim',
-  -- event = 'VeryLazy',
-  lazy = false,
-  enabled = true,
-  -- TODO: triggers är inte speciellt snyggt, bör gå att göra snyggare
-  triggers = {
-    { "<leader>", mode = { "n" } },
-  },
-  debug = true,
-  -- TODO: options/config
-  opts = {},
-  keys = require("skogix.core.keymaps").whichkey,
+	"folke/which-key.nvim",
+	-- event = 'VeryLazy',
+	lazy = false,
+	enabled = true,
+	-- TODO: triggers är inte speciellt snyggt, bör gå att göra snyggare
+	triggers = {
+		{ "<leader>", mode = { "n" } },
+		{ "s", mode = { "n" } },
+	},
+	debug = true,
+	-- TODO: options/config
+	opts = {},
+	keys = require("skogix.core.keymaps").whichkey,
 }

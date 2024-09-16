@@ -3,7 +3,9 @@ local symbols_workspace_prefix = "<leader>sS"
 local actions = require("telescope.actions")
 
 return {
-  { import = "lazyvim.plugins.extras.editor.telescope" },
+  { import = "skogix.plugins.telescope" },
+  { import = "skogix.plugins" },
+  -- { import = "skogix.plugins.telescope" },
   {
     "nvim-telescope/telescope.nvim",
     -- stylua: ignore

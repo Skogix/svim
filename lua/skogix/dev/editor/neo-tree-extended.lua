@@ -1,10 +1,12 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  keys = require("skogix.core.keymaps").neotree,
   opts = {
     close_if_last_window = true,
     window = {
       mappings = {
         ["e"] = "open",
+        ["l"] = "open",
         ["E"] = function()
           vim.api.nvim_exec("Neotree focus filesystem left", true)
         end,
