@@ -23,39 +23,12 @@ map("n", "[<tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 map("n", "<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<s-tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
--- M.basics = function()
--- 	local map = vim.keymap.set
---
--- 	-- keys = require("skogix.core.keymaps").whichkey,
--- 	-- ';' till ':' i normal mode
--- 	map("n", ";", ":", { desc = "; -> :" })
--- 	-- rensa 's' i normal för search
--- 	map("n", "s", "<Nop>", { desc = "" })
--- 	map("n", "<C-h>", "<C-w><C-h>", { desc = "focus left" })
--- 	map("n", "<C-l>", "<C-w><C-l>", { desc = "focus right" })
--- 	map("n", "<C-j>", "<C-w><C-j>", { desc = "focus up" })
--- 	map("n", "<C-k>", "<C-w><C-k>", { desc = "focus down" })
---
--- 	map("n", "<S-h>", "next buffer", { desc = "focus down" })
--- 	map("n", "<S-l>", "next buffer", { desc = "focus down" })
---
--- 	-- Copy paste
--- 	vim.keymap.set({ "n", "x" }, "<leader>y", [["+y]]) -- copy to system clipboard
--- 	vim.keymap.set({ "n", "x" }, "<leader>p", [["+p]]) -- paste from system clipboard
---
--- 	-- tabs
--- 	map("n", "]<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
--- 	map("n", "[<tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
--- 	map("n", "<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
--- 	map("n", "<s-tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
--- end
---
-
 M.telescopelazy = function()
 	return {
 		{ "<leader>sp", "<cmd>Telescope lazy<CR>", desc = "Plugins (Lazy)" },
 	}
 end
+
 M.telescopefilebrowser = function()
 	return {
 		{ "<leader>'", "<cmd>Telescope file_browser<cr>", desc = "Telescope File Browser (root dir)" },
@@ -78,9 +51,6 @@ M.neotree = function()
 	return {
 		{ "<leader>e", "<cmd>Neotree reveal_force_cwd left<cr>", desc = "[neotree] toggle neotree" }, -- Keybinding to open neotree
 		{ "<leader>-", "<cmd>Neotree reveal_force_cwd float<cr>", desc = "[neotree] toggle neotree" }, -- Keybinding to open neotree
-
-		-- vim.keymap.set('n', '<leader>e', "<cmd>Neotree reveal_force_cwd left<cr>")
-		-- vim.keymap.set('n', '<leader>-', "<cmd>Neotree reveal_force_cwd float<cr>")
 	}
 end
 M.harpoon = function()

@@ -24,6 +24,8 @@ require("lazy").setup({
 		-- { import = "skogix.plugins" },
 		{ import = "skogix.plugins.disabled" },
 		{ import = "skogix.plugins.ui" },
+		{ import = "skogix.dev.coding.ai.codecompanion" },
+		{ import = "skogix.plugins.sourcegraph" },
 		{ import = "skogix.plugins.bufferline" },
 		{ import = "skogix.plugins.cmp" },
 		{ import = "skogix.plugins.harpoon" },
@@ -34,6 +36,7 @@ require("lazy").setup({
 		{ import = "skogix.plugins.telescope" },
 		{ import = "skogix.plugins.treesitter" },
 		{ import = "skogix.plugins.which-key" },
+		{ import = "skogix.plugins.neorg" },
 
 		-- done
 		{ import = "skogix.dev.ui.alpha" },
@@ -167,7 +170,6 @@ require("lazy").setup({
 		--   { import = "skogix.dev.ui.zen-mode" },
 
 		-- { import = "lazyvim.plugins.extras.editor.fzf" },
-		-- { import = "skogix.disabled" },
 	},
 	ui = {
 		backdrop = 100,

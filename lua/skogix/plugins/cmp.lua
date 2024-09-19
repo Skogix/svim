@@ -5,33 +5,33 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
-		{
-			"L3MON4D3/LuaSnip",
-			build = (function()
-				-- Build Step is needed for regex support in snippets.
-				-- This step is not supported in many windows environments.
-				-- Remove the below condition to re-enable on windows.
-				return "make install_jsregexp"
-			end)(),
-			dependencies = {
-				-- `friendly-snippets` contains a variety of premade snippets.
-				--    See the README about individual language/framework/plugin snippets:
-				--    https://github.com/rafamadriz/friendly-snippets
-				-- {
-				--   'rafamadriz/friendly-snippets',
-				--   config = function()
-				--     require('luasnip.loaders.from_vscode').lazy_load()
-				--   end,
-				-- },
-			},
-		},
+		-- {
+		-- 	"L3MON4D3/LuaSnip",
+		-- 	build = (function()
+		-- 		-- Build Step is needed for regex support in snippets.
+		-- 		-- This step is not supported in many windows environments.
+		-- 		-- Remove the below condition to re-enable on windows.
+		-- 		return "make install_jsregexp"
+		-- 	end)(),
+		-- 	dependencies = {
+		-- 		-- `friendly-snippets` contains a variety of premade snippets.
+		-- 		--    See the README about individual language/framework/plugin snippets:
+		-- 		--    https://github.com/rafamadriz/friendly-snippets
+		-- 		-- {
+		-- 		--   'rafamadriz/friendly-snippets',
+		-- 		--   config = function()
+		-- 		--     require('luasnip.loaders.from_vscode').lazy_load()
+		-- 		--   end,
+		-- 		-- },
+		-- 	},
+		-- },
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
 		-- See `:help cmp`
 		local cmp = require("cmp")
-		local luasnip = require("luasnip")
-		luasnip.config.setup({})
+		-- local luasnip = require("luasnip")
+		-- luasnip.config.setup({})
 
 		cmp.setup({
 			snippet = {
@@ -100,7 +100,7 @@ return {
 					group_index = 0,
 				},
 				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
+				-- { name = "luasnip" },
 				{ name = "path" },
 				{ name = "buffer" },
 				{ name = "snippets" },
