@@ -1,12 +1,12 @@
 local prefix = "sr"
 
 return {
-  {
-    "roobert/search-replace.nvim",
-    opts = {
-      default_replace_single_buffer_options = "gcI",
-      default_replace_multi_buffer_options = "egcI",
-    },
+	{
+		"roobert/search-replace.nvim",
+		opts = {
+			default_replace_single_buffer_options = "gcI",
+			default_replace_multi_buffer_options = "egcI",
+		},
     -- stylua: ignore
     keys = {
     { prefix .. "b", "<CMD>SearchReplaceSingleBufferVisualSelection<CR>", desc = "Buffer", mode = "v" },
@@ -18,33 +18,33 @@ return {
     { prefix .. "W", "<CMD>SearchReplaceSingleBufferCWORD<CR>", desc = "WORD on Buffer", mode = "n" },
     { prefix .. "e", "<CMD>SearchReplaceSingleBufferCExpr<CR>", desc = "Expression on Buffer", mode = "n" },
     },
-  },
-  {
-    "folke/which-key.nvim",
-    opts = {
-      spec = {
-        { prefix, group = "replace", icon = " " },
-      },
-    },
-  },
-  {
-    "MagicDuck/grug-far.nvim",
-    keys = {
-      {
-        prefix .. "p",
-        function()
-          local grug = require("grug-far")
-          local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
-          grug.grug_far({
-            transient = true,
-            prefills = {
-              filesFilter = ext and ext ~= "" and "*." .. ext or nil,
-            },
-          })
-        end,
-        mode = { "n", "v" },
-        desc = "Project",
-      },
-    },
-  },
+	},
+	{
+		"folke/which-key.nvim",
+		opts = {
+			spec = {
+				{ prefix, group = "replace", icon = " " },
+			},
+		},
+	},
+	{
+		"MagicDuck/grug-far.nvim",
+		keys = {
+			{
+				prefix .. "p",
+				function()
+					local grug = require("grug-far")
+					local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
+					grug.grug_far({
+						transient = true,
+						prefills = {
+							filesFilter = ext and ext ~= "" and "*." .. ext or nil,
+						},
+					})
+				end,
+				mode = { "n", "v" },
+				desc = "Project",
+			},
+		},
+	},
 }

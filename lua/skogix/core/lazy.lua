@@ -37,6 +37,12 @@ require("lazy").setup({
 		{ import = "skogix.plugins.treesitter" },
 		{ import = "skogix.plugins.which-key" },
 		{ import = "skogix.plugins.neorg" },
+		{ import = "skogix.plugins.chatgpt" },
+		{ import = "skogix.plugins.folke" },
+		-- { import = "skogix.plugins.project" },
+		-- { import = "skogix.plugins.gp" },
+		-- { import = "skogix.plugins.vim-ai" },
+		-- { import = "skogix.plugins.aider" },
 
 		-- done
 		{ import = "skogix.dev.ui.alpha" },
@@ -49,8 +55,8 @@ require("lazy").setup({
 		{ import = "skogix.dev.editor.telescope.undotree" },
 		{ import = "skogix.dev.editor.docs.devdocs" },
 		{ import = "skogix.todo.toggleterm" },
-		{ import = "skogix.todo.copilot" },
-		{ import = "skogix.todo.copilot-chat" },
+		-- { import = "skogix.todo.copilot" },
+		-- { import = "skogix.todo.copilot-chat" },
 		{ import = "skogix.dev.coding.cmp.dotenv" },
 
 		-- todo
@@ -175,7 +181,7 @@ require("lazy").setup({
 		backdrop = 100,
 	},
 	defaults = {
-		lazy = true,
+		lazy = false,
 		version = false, -- always use the latest git commit
 		-- version = "*", -- try installing the latest stable version for plugins that support semver
 		keymaps = false,
@@ -200,5 +206,3 @@ require("lazy").setup({
 		},
 	},
 })
-
-require("lazy").setup(specs)

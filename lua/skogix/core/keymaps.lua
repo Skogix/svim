@@ -132,6 +132,23 @@ end
 
 M.fzf = function()
 	return {
+		{
+			"<leader>fp",
+			LazyVim.pick("files", { cwd = require("lazy.core.config").options.root }),
+			desc = "Find Plugin File",
+		},
+		{
+			"<leader>sp",
+			function()
+				local dirs = { "~/dot/nvim/lua/plugins", "~/projects/LazyVim/lua/lazyvim/plugins" }
+				require("fzf-lua").live_grep({
+					filespec = "-- " .. table.concat(vim.tbl_values(dirs), " "),
+					search = "/",
+					formatter = "path.filename_first",
+				})
+			end,
+			desc = "Find Lazy Plugin Spec",
+		},
 		{ "<c-j>", "<c-j>", ft = "fzf", mode = "t", nowait = true },
 		{ "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
 		{
@@ -205,7 +222,8 @@ M.telescope = function()
 	return {
 		{
 			"sg",
-			":lua require('telescope.builtin').grep_string()<CR>",
+			-- ":lua require('telescope.builtin').grep_string()<CR>",
+			":lua require('telescope.builtin').live_grep()<CR>",
 			noremap = true,
 			silent = true,
 			desc = "[telescope] grep string",

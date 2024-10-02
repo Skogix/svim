@@ -2,8 +2,11 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 vim.opt.background = "dark"
+vim.opt.spell = false
 vim.opt.backup = false
-vim.opt.clipboard = "" -- TODO: sätta allt själv eller använda unnamed?
+-- vim.opt.clipboard = "" -- TODO: sätta allt själv eller använda unnamed?
+-- vim.opt.clipboard = "unnamedplus" -- TODO: sätta allt själv eller använda unnamed?
+vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 vim.opt.cmdheight = 0
 -- https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#concealing-characters
 vim.opt.conceallevel = 2 -- används av neorg och markdown
